@@ -3,7 +3,7 @@
 # nltk.download('punkt_tab')
 
 from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize
-from nltk.
+from nltk.tokenize import TreebankWordTokenizer
 
 corpus = """Welcome! Hello my name is Atul. 
 I am a software developer. You are watching atul's code.
@@ -20,4 +20,11 @@ print(words)
 
 ### Tokenization - sentences to words
 words = wordpunct_tokenize(corpus)
+print("---- wordpunct_tokenize ----")
+print(words)
+
+### TreeBankWordTokenizer
+print("---- TreebankWordTokenizer ----")
+tokenizer = TreebankWordTokenizer()
+words = tokenizer.tokenize(corpus)
 print(words)
